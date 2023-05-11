@@ -1,5 +1,6 @@
 import SideNavbar from "./Navigations/SideNavbar";
 import TopNavbar from './Navigations/TopNavbar';
-import Container from "./Container";
+import ContainerIntroduction from "./ContainerIntroduction";
+import ContainerSkills from "./ContainerSkills";
 
-export { SideNavbar, TopNavbar, Container };
+export { SideNavbar, TopNavbar, ContainerIntroduction, ContainerSkills };

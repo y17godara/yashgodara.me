@@ -7,9 +7,9 @@ const TopNavbar = () => {
   return (
     <>
       <section>
-        <div className="flex flex-row justify-between px-4 items-center">
+        <div className="flex flex-row justify-between items-center">
           <a href="/">
-            <div className="flex flex-row items-center gap-2 p-2 h-[88px]">
+            <div className="flex flex-row items-center gap-2 h-[88px]">
               <Image
                 className="hidden items-center md:flex xl:flex"
                 src="https://i.imgur.com/n05Wr0e.png"
@@ -22,7 +22,7 @@ const TopNavbar = () => {
               </h1>
             </div>
           </a>
-          <div className="flex flex-row item-center gap-2 p-2">
+          <div className="flex flex-row item-center gap-2">
             <a href="https://github.com/y17godara" target="_blank">
               <SiGithub size={20} />
             </a>

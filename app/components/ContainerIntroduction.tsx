@@ -1,10 +1,10 @@
 import Image from "next/image";
 import { FaGithub, FaTwitter, FaLinkedin }  from "react-icons/fa";
 
-const Container = () => {
+const ContainerIntroduction = () => {
   return (
     <>
-      <section className="flex flex-col  align-center justify-center items-start">
+      <section className="flex flex-col p-4 align-center justify-center items-start">
         <div>
           <Image
             src="https://i.imgur.com/n05Wr0e.png"
@@ -15,8 +15,8 @@ const Container = () => {
           />
         </div>
         <div>
-          <div className="max-w-xl px-5">
-            <h1 className="mt-4 items-center text-3xl font-bold flex md:items-end md:flex-row flex-col">
+          <div className="max-w-[768px] px-5">
+            <h1 className="mt-4 text-3xl font-bold flex md:items-end md:flex-row flex-col">
               <div title="y17godara">Yash Godara</div>
 
               <div className="flex md:ml-3 items-center">
@@ -64,4 +64,4 @@ const Container = () => {
     </>
   );
 }
-export default Container;
+export default ContainerIntroduction;

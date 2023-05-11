@@ -1,5 +1,6 @@
 import "./globals.css";
 import { SideNavbar } from "./components";
+import Head from "next/head";
 
 import { Roboto_Mono } from "next/font/google";
 const roboto = Roboto_Mono({
@@ -10,6 +11,9 @@ const roboto = Roboto_Mono({
 export const metadata = {
   title: "Yash Godara",
   description: "Personal Portfolio of Yash Godara",
+  icons: {
+    icon: "/logo.png",
+  },
 };
 
 export default function RootLayout({

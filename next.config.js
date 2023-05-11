@@ -3,6 +3,14 @@ const nextConfig = {
   reactStrictMode: true,
   images: {
     domains: ["imgur.com", "i.imgur.com"],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "skillicons.dev",
+        port: "",
+        pathname: "/**",
+      },
+    ],
   },
 };
 

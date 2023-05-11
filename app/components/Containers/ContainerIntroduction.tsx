@@ -1,10 +1,10 @@
 import Image from "next/image";
-import { FaGithub, FaTwitter, FaLinkedin }  from "react-icons/fa";
+import { FaGithub, FaTwitter, FaLinkedin } from "react-icons/fa";
 
 const ContainerIntroduction = () => {
   return (
     <>
-      <section className="flex flex-col p-4 align-center justify-center items-start">
+      <section>
         <div>
           <Image
             src="https://i.imgur.com/n05Wr0e.png"
@@ -63,5 +63,5 @@ const ContainerIntroduction = () => {
       </section>
     </>
   );
-}
+};
 export default ContainerIntroduction;

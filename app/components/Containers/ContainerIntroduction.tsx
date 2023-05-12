@@ -23,6 +23,7 @@ const ContainerIntroduction = () => {
                 <div className="text-lg">[he/they]</div>
                 <div className="flex text-xl ml-3 gap-1 items-center">
                   <a
+                    title="twitter"
                     href="https://twitter.com/y17godara"
                     target="_blank"
                     className="hover:opacity-80 transition"
@@ -30,6 +31,7 @@ const ContainerIntroduction = () => {
                     <FaTwitter />
                   </a>
                   <a
+                    title="github"
                     href="https://github.com/y17godara"
                     target="_blank"
                     className="hover:opacity-80 transition"
@@ -37,6 +39,7 @@ const ContainerIntroduction = () => {
                     <FaGithub />
                   </a>
                   <a
+                    title="linkedIn"
                     href="https://www.linkedin.com/in/yash-godara-a91442246/"
                     target="_blank"
                     className="hover:opacity-80 transition"
@@ -48,15 +51,22 @@ const ContainerIntroduction = () => {
             </h1>
 
             <p className="mt-4">
-              Hello there, I am <span className=""></span> Yash Godara from
-              India, currently studying and working in the field of development
-              and design. Every day I enjoy learning something new, and I have a
-              good understanding of UI Design, Web Development, and Python, C
-              Programming.
+              Hello, my name is Yash Godara and I am a development and design
+              enthusiast from India. I am currently studying in same field, and
+              I am passionate about learning something new every day. My areas
+              of expertise include Web Development, as well as Programming.
             </p>
             <p>
-              Also, on occasion, I love to blog and create documentation related
-              to my studies that I use as notes.
+              In addition to my technical skills, I enjoy ui-designing, writing
+              and blogging about my experiences and knowledge gained through my
+              studies and projects. I often create detailed documentation that I
+              use as notes to help me better understand and retain the
+              information.
+            </p>
+            <p>
+              I believe that continuous learning and improvement are essential
+              to success in any field, and I am committed to expanding my
+              knowledge and skills to stay ahead of the curve.
             </p>
           </div>
         </div>

@@ -1,4 +1,6 @@
-const ContainerEducation = () => {
+import { Box } from '../index'
+
+const ContainerProjects = () => {
   return (
     <>
       <section>
@@ -8,10 +10,14 @@ const ContainerEducation = () => {
               <h1 className="text-3xl font-bold">⚙️Projects</h1>
               <p className="mt-4">
                 As of Now, I dont have any major personal projects to showcase,
-                but I have worked on Plenty on Mini Projects and Some Frontend Websites Also,
-                 Currently Planning to build some FullStack Projects.
+                but I have worked on Plenty on Mini Projects and Some Frontend
+                Websites Also, Currently Planning to build some FullStack
+                Projects.
               </p>
               {/* List */}
+              <div className='py-5'>
+                <Box />
+              </div>
             </div>
           </div>
         </div>
@@ -20,4 +26,4 @@ const ContainerEducation = () => {
   );
 }
 
-export default ContainerEducation;
+export default ContainerProjects;

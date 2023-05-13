@@ -18,7 +18,8 @@ const nextConfig = {
       },
       {
         protocol: "https",
-        hostname: "media.discordapp.net",
+        hostname:
+          "images.freeimages.com",
         port: "",
         pathname: "/**",
       },

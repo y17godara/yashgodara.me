@@ -18,8 +18,7 @@ const nextConfig = {
       },
       {
         protocol: "https",
-        hostname:
-          "images.freeimages.com",
+        hostname: "i.ytimg.com",
         port: "",
         pathname: "/**",
       },

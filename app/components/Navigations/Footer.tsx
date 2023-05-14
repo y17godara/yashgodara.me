@@ -32,13 +32,18 @@ const Footer = () => {
                 </h2>
                 <ul className="text-gray-600 dark:text-gray-400 font-medium">
                   <li className="mb-4">
-                    <a href="https://flowbite.com/" className="hover:underline">
+                    <a
+                      href="https://www.linkedin.com/in/yash-godara-a91442246/"
+                      target="_blank"
+                      className="hover:underline"
+                    >
                       Linked In
                     </a>
                   </li>
                   <li>
                     <a
-                      href="https://tailwindcss.com/"
+                      href="https://developers.google.com/profile/u/YashGodara"
+                      target="_blank"
                       className="hover:underline"
                     >
                       Google Dev
@@ -54,6 +59,7 @@ const Footer = () => {
                   <li className="mb-4">
                     <a
                       href="https://github.com/y17godara"
+                      target="_blank"
                       className="hover:underline "
                     >
                       Github
@@ -62,6 +68,7 @@ const Footer = () => {
                   <li>
                     <a
                       href="https://twitter.com/y17godara"
+                      target="_blank"
                       className="hover:underline"
                     >
                       Twitter
@@ -92,7 +99,7 @@ const Footer = () => {
           <div className="sm:flex sm:items-center sm:justify-between">
             <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
               © 2023{" "}
-              <a href="https://flowbite.com/" className="hover:underline">
+              <a href="/" className="hover:underline">
                 yashgodara.me™
               </a>
               . All Rights Reserved.
@@ -136,6 +143,7 @@ const Footer = () => {
               </a> */}
               <a
                 href="https://twitter.com/y17godara"
+                target="_blank"
                 className="text-gray-500 hover:text-gray-900 dark:hover:text-white"
               >
                 <svg
@@ -150,6 +158,7 @@ const Footer = () => {
               </a>
               <a
                 href="https://github.com/y17godara"
+                target="_blank"
                 className="text-gray-500 hover:text-gray-900 dark:hover:text-white"
               >
                 <svg

@@ -1,6 +1,5 @@
 import "./globals.css";
 import { SideNavbar } from "./components";
-import Head from "next/head";
 
 import { Roboto_Mono } from "next/font/google";
 const roboto = Roboto_Mono({

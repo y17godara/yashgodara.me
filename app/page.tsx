@@ -1,12 +1,10 @@
-import Image from "next/image";
 import {
   TopNavbar,
   ContainerIntroduction,
   ContainerSkills,
-  ContainerProjects,
   ContainerEducation,
   Footer
-} from "./components";
+} from "@components/index";
 
 export default function Home() {
   return (
@@ -30,11 +28,6 @@ export default function Home() {
             <div className="p-5"></div>
             <hr className="w-48 h-[3px] mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-700" />
             <div className="p-5"></div>
-
-            <ContainerProjects />
-            <div className="p-10"></div>
-            <hr className="w-48 h-[3px] mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-700" />
-            <div className="p-10"></div>
 
             <ContainerEducation />
           </div>

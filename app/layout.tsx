@@ -1,5 +1,5 @@
 import "./globals.css";
-import { SideNavbar } from "./components";
+import { TopNavbar } from '@components';
 
 import { Roboto_Mono } from "next/font/google";
 const roboto = Roboto_Mono({
@@ -25,7 +25,6 @@ export default function RootLayout({
       <body className={roboto.className}>
         <div>
           <div className="z-[999]">
-            <SideNavbar />
           </div>
           <div className="z-[1]">{children}</div>
         </div>

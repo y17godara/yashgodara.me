@@ -1,3 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+    --navbar-height: 80px;
+    --page-height: calc(100vh - var(--navbar-height));
+}
+::selection {
+    background-color: #e0cb54;
+    color: #fff;
+}

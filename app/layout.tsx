@@ -34,12 +34,12 @@ export default function RootLayout({
         >
 
           {/* Header */}
-          <div className="z-[999] py-2 px-4 sm:px-8 md:px-12 sticky top-0 backdrop-blur-md shadow-sm">
+          <div className="z-[999] h-[--navbar-height] py-2 px-4 sm:px-8 md:px-12 sticky top-0 backdrop-blur-md shadow-sm">
             <TopNavbar />
           </div>
 
           {/* Content Pages */}
-          <div className="m-auto min-h-screen flex flex-col p-4 align-center justify-center items-start">
+          <div className="m-auto min-h-[--page-height] flex flex-col p-4 align-center justify-center items-start">
             {children}
           </div>
 

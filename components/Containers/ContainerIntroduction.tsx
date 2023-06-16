@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { FaGithub, FaTwitter, FaLinkedin } from "react-icons/fa";
+import { FaKickstarter, FaTwitter, FaLinkedin } from "react-icons/fa";
 
 const ContainerIntroduction = () => {
   return (
@@ -32,11 +32,11 @@ const ContainerIntroduction = () => {
                   </a>
                   <a
                     title="github"
-                    href="https://github.com/y17godara"
+                    href="https://kick.com/yashgodara"
                     target="_blank"
                     className="hover:opacity-80 transition"
                   >
-                    <FaGithub />
+                    <FaKickstarter />
                   </a>
                   <a
                     title="linkedIn"

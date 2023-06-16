@@ -1,5 +1,8 @@
 import "./globals.css";
-import { TopNavbar } from '@components';
+import {
+  TopNavbar,
+  Footer
+} from "@components/index";
 
 import { Roboto_Mono } from "next/font/google";
 const roboto = Roboto_Mono({
@@ -23,11 +26,30 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={roboto.className}>
-        <div>
-          <div className="z-[999]">
+
+        {/* Main Page */}
+        <main
+          className="flex justify-center flex-col mx-auto scroll-smooth transition duration-150 ease-out hover:ease-in"
+          data-scroll-container="true"
+        >
+
+          {/* Header */}
+          <div className="z-[999] py-2 px-4 sm:px-8 md:px-12 sticky top-0 backdrop-blur-md shadow-sm">
+            <TopNavbar />
           </div>
-          <div className="z-[1]">{children}</div>
-        </div>
+
+          {/* Content Pages */}
+          <div className="m-auto min-h-screen flex flex-col p-4 align-center justify-center items-start">
+            {children}
+          </div>
+
+          {/* Footer */}
+          <div>
+            <Footer />
+          </div>
+        
+        </main>
+        
       </body>
     </html>
   );

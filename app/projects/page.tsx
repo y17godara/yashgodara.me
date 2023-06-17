@@ -1,27 +1,23 @@
-import React from 'react'
-import { ContainerProjects } from "@components/index";
+import { useRouter } from 'next/router';
+import React from 'react';
+import { projects } from './projects.json';
 
-const page = () => {
-  return (
-    <>
-      <main
-        className="flex justify-center flex-col mx-auto scroll-smooth transition duration-150 ease-out hover:ease-in"
-        data-scroll-container="true"
-      >
-        <div className="mx-auto">
-          <div className="m-auto flex flex-col p-4 align-center justify-center items-start">
+const Page = () => {
+    const router = useRouter();
+    const { slug } = router.query;
 
-            {/*  */}
-            <ContainerProjects />
-            <div className="p-10"></div>
-            <hr className="w-48 h-[3px] mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-700" />
-            <div className="p-10"></div>
-            
-          </div>
-        </div> 
-      </main>
-    </>
-  )
-}
+    // Find the project with the matching slug
+    const project = projects.find((p) => p.id === slug);
 
-export default page
+    if (!project) {
+        return <h1>Project not found</h1>;
+    }
+
+    return (
+        <>
+            <h1 className="font-bold text-3xl md:text-4xl h-14">{project.name}</h1>
+        </>
+    );
+};
+
+export default Page;

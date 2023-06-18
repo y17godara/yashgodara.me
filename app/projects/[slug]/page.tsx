@@ -72,7 +72,9 @@ const Page: React.FC<PageProps> = ({ params }) => {
     <>
     hello
       <h1 className="font-bold text-3xl md:text-4xl h-14">{project.name}</h1>
-      <button>Back</button>
+      <Link href="/projects">
+        Back
+      </Link>
     </>
   );
 };

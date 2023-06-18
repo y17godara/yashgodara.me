@@ -1,6 +1,7 @@
 "use client"
-import { useRouter } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import React from 'react';
+import Link from 'next/link';
 
 interface Project {
     id: string;
@@ -25,19 +26,23 @@ const projects: Project[] = [
 const URL = '/projects';
 
 const Page = () => {
-    const router = useRouter();
+    // const router = useRouter();
+
+    //router for navigation
+    const router = usePathname();
+
 
     return (
         <>
             {projects.map((project) => (
-                <button
+                <Link
                     key={project.id}
                     className='border border-red-500'
                     type="button"
-                    onClick={() => router.push(`${URL}/${project.id}`)}
+                    href={`${URL}/${project.id}`}
                 >
                     {project.name}
-                </button>
+                </Link>
             ))}
         </>
     );

@@ -1,4 +1,7 @@
-import { GetStaticPaths, GetStaticProps, GetStaticPropsContext } from 'next';
+"use client"
+import { GetStaticProps } from 'next';
+import { GetStaticPropsContext } from 'next';
+import { GetStaticPaths } from 'next';
 import React from 'react';
 import Link from 'next/link';
 import { ParsedUrlQuery } from 'querystring';
@@ -20,6 +23,7 @@ const projects = [
 
 ];
 
+const URL = '/projects';
 
 interface PageProps {
   params: {
@@ -27,22 +31,6 @@ interface PageProps {
   };
 }
 
-const Page: React.FC<PageProps> = ({ params }) => {
-  const { slug } = params;
-
-  // Find the project with the matching slug
-  const project = projects.find((p) => p.id === slug);
-
-  if (!project) {
-    return <h1>Project not found</h1>;
-  }
-
-  return (
-    <>
-      <h1 className="font-bold text-3xl md:text-4xl h-14">{project.name}</h1>
-    </>
-  );
-};
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const paths = projects.map((project) => ({
@@ -67,6 +55,26 @@ export const getStaticProps: GetStaticProps<PageProps> = async (
       },
     },
   };
+};
+
+
+const Page: React.FC<PageProps> = ({ params }) => {
+  const { slug } = params;
+
+  // Find the project with the matching slug
+  const project = projects.find((p) => p.id === slug);
+
+  if (!project) {
+    return <h1>Project not found</h1>;
+  }
+
+  return (
+    <>
+    hello
+      <h1 className="font-bold text-3xl md:text-4xl h-14">{project.name}</h1>
+      <button>Back</button>
+    </>
+  );
 };
 
 export default Page;

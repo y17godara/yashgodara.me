@@ -1,21 +1,44 @@
-import { useRouter } from 'next/router';
+"use client"
+import { useRouter } from 'next/navigation';
 import React from 'react';
-import { projects } from './projects.json';
+
+interface Project {
+    id: string;
+    name: string;
+}
+
+const projects: Project[] = [
+    {
+        id: 'project-1',
+        name: 'Project 1',
+    },
+    {
+        id: 'project-2',
+        name: 'Project 2',
+    },
+    {
+        id: 'project-3',
+        name: 'Project 3',
+    },
+];
+
+const URL = '/projects';
 
 const Page = () => {
     const router = useRouter();
-    const { slug } = router.query;
-
-    // Find the project with the matching slug
-    const project = projects.find((p) => p.id === slug);
-
-    if (!project) {
-        return <h1>Project not found</h1>;
-    }
 
     return (
         <>
-            <h1 className="font-bold text-3xl md:text-4xl h-14">{project.name}</h1>
+            {projects.map((project) => (
+                <button
+                    key={project.id}
+                    className='border border-red-500'
+                    type="button"
+                    onClick={() => router.push(`${URL}/${project.id}`)}
+                >
+                    {project.name}
+                </button>
+            ))}
         </>
     );
 };

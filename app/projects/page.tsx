@@ -1,51 +1,14 @@
-"use client"
-import { usePathname, useRouter } from 'next/navigation';
 import React from 'react';
 import Link from 'next/link';
+import * as dataProjects from '@data/json/projects.json';
+import { Card } from '@components/index';
 
-interface Project {
-    id: string;
-    name: string;
-}
-
-const projects: Project[] = [
-    {
-        id: 'project-1',
-        name: 'Project 1',
-    },
-    {
-        id: 'project-2',
-        name: 'Project 2',
-    },
-    {
-        id: 'project-3',
-        name: 'Project 3',
-    },
-];
-
-const URL = '/projects';
-
-const Page = () => {
-    // const router = useRouter();
-
-    //router for navigation
-    const router = usePathname();
-
-
+const ProjectsPage = () => {
     return (
         <>
-            {projects.map((project) => (
-                <Link
-                    key={project.id}
-                    className='border border-red-500'
-                    type="button"
-                    href={`${URL}/${project.id}`}
-                >
-                    {project.name}
-                </Link>
-            ))}
+            <Card/>
         </>
     );
 };
 
-export default Page;
+export default ProjectsPage;

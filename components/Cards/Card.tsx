@@ -8,7 +8,6 @@ interface CardProps {
     projectHightlight: string;
     projectDescription: string;
     projectGithub: string;
-    projectTags: string[];
 }
 
 
@@ -19,7 +18,6 @@ const Card: React.FC<CardProps> = ({
     projectHightlight,
     projectDescription,
     projectGithub,
-    projectTags,
 
 }: CardProps) => {
 

@@ -20,8 +20,7 @@ const ProjectsPage = () => {
                             projectGithub={dataProjects.project1.name}
                             projectDescription={dataProjects.project1.description}
                             projectTitle={dataProjects.project1.name}
-                            projectImage={dataProjects.project1.images[1]}
-                            projectTags={dataProjects.project1.tags}
+
                         />
                         {/* 4 */}
 

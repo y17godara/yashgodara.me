@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-    --navbar-height: 80px;
+    --navbar-height: 100px;
     --page-height: calc(100vh - var(--navbar-height));
 }
 ::selection {

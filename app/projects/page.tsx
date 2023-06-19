@@ -30,13 +30,13 @@ const ProjectsPage = () => {
                         </div>
                         {/* card data */}
                         <Card
-                            projectHightlight={project2.name}
-                            projectGithub={project2.repositorie}
-                            projectDescription={project2.description}
-                            projectTitle={project2.name}
-                            // imageSrc={project2.images['1']} // Add the image source property
-                            imageAlt="Project Image" // Add the image alt property
-                        />
+                        projectHightlight={project2.name}
+                        projectGithub={project2.repositorie}
+                        projectDescription={project2.description}
+                        projectTitle={project2.name}
+                        // imageSrc={project2.images['1']} // Add the image source property
+                        imageAlt="Project Image" // Add the image alt property
+                        imageSrc={''}                        />
                        
                         {/* Add more cards as needed */}
                     </div>

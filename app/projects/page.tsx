@@ -62,47 +62,6 @@ const ProjectsPage = () => {
     return (
         <>
             <section>
-                <div className="flex justify-center mt-8">
-                    {/* Technology Filter */}
-                    <div className="mr-4">
-                        <label htmlFor="technology" className="block mb-2 font-medium">
-                            Technology
-                        </label>
-                        <select
-                            id="technology"
-                            className="p-2 border border-gray-300 rounded"
-                            value={selectedTechnology}
-                            onChange={(e) => setSelectedTechnology(e.target.value)}
-                        >
-                            <option value="">All</option>
-                            {technologyOptions.map((option) => (
-                                <option key={option} value={option}>
-                                    {option}
-                                </option>
-                            ))}
-                        </select>
-                    </div>
-
-                    {/* Category Filter */}
-                    <div>
-                        <label htmlFor="category" className="block mb-2 font-medium">
-                            Category
-                        </label>
-                        <select
-                            id="category"
-                            className="p-2 border border-gray-300 rounded"
-                            value={selectedCategory}
-                            onChange={(e) => setSelectedCategory(e.target.value)}
-                        >
-                            <option value="">All</option>
-                            {categoryOptions.map((option) => (
-                                <option key={option} value={option}>
-                                    {option}
-                                </option>
-                            ))}
-                        </select>
-                    </div>
-                </div>
 
                 <div className="grid grid-cols-1 sm:flex-col sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 xl:gap-10 max-w-[1440px] mt-8">
                     {/* Grid Header Card */}
@@ -117,6 +76,49 @@ const ProjectsPage = () => {
                                 imageSrc={filteredProjects[0]?.images['1']}
                                 imageAlt="Project Image"
                             />
+                        </div>
+                    </div>
+
+                    {/*  */}
+                    <div className="flex justify-center mt-8">
+                        {/* Technology Filter */}
+                        <div className="mr-4">
+                            <label htmlFor="technology" className="block mb-2 font-medium">
+                                Technology
+                            </label>
+                            <select
+                                id="technology"
+                                className="p-2 border border-gray-300 rounded"
+                                value={selectedTechnology}
+                                onChange={(e) => setSelectedTechnology(e.target.value)}
+                            >
+                                <option value="">All</option>
+                                {technologyOptions.map((option) => (
+                                    <option key={option} value={option}>
+                                        {option}
+                                    </option>
+                                ))}
+                            </select>
+                        </div>
+
+                        {/* Category Filter */}
+                        <div>
+                            <label htmlFor="category" className="block mb-2 font-medium">
+                                Category
+                            </label>
+                            <select
+                                id="category"
+                                className="p-2 border border-gray-300 rounded"
+                                value={selectedCategory}
+                                onChange={(e) => setSelectedCategory(e.target.value)}
+                            >
+                                <option value="">All</option>
+                                {categoryOptions.map((option) => (
+                                    <option key={option} value={option}>
+                                        {option}
+                                    </option>
+                                ))}
+                            </select>
                         </div>
                     </div>
 

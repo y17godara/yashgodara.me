@@ -1,7 +1,7 @@
 import {
   ContainerIntroduction,
   ContainerSkills,
-  ContainerEducation,
+  // ContainerEducation,
 } from "@components/index";
 
 export default function Home() {

@@ -5,7 +5,20 @@ import ContainerProjects from "./Containers/ContainerProjects";
 import Box from "./reuseable/Box";
 import ContainerEducation from "./Containers/ContainerEducation";
 import Footer from "./Navigations/Footer";
-import Card from './Cards/Card'
-import HeaderCard from './Cards/HeaderCard'
+import Card from './Cards/Card';
+import HeaderCard from './Cards/HeaderCard';
+import AnnouncementCard from './Cards/AnnouncementCard';
 
-export { TopNavbar, ContainerIntroduction, ContainerSkills, ContainerProjects, ContainerEducation, Box, Footer, Card, HeaderCard };
+
+export {
+    TopNavbar,
+    ContainerIntroduction,
+    ContainerSkills,
+    ContainerProjects,
+    ContainerEducation,
+    Box,
+    Footer,
+    Card,
+    HeaderCard,
+    AnnouncementCard
+};

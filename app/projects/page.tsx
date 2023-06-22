@@ -1,16 +1,15 @@
 "use client";
 import React, { useState, useMemo } from 'react';
-import * as jsonData from '@data/json/data.json';
+import jsonData from '@data/json/data.json';
 import { Card, HeaderCard } from '@components/index';
 
 const ProjectsPage = () => {
+    const dataProjects = jsonData.dataProjects;
     const [selectedTechnology, setSelectedTechnology] = useState('');
     const [selectedCategory, setSelectedCategory] = useState('');
 
-    const projectsData = jsonData.dataProjects;
-
     const filteredProjects = useMemo(() => {
-        let filtered = Object.values(projectsData);
+        let filtered = Object.values(dataProjects);
 
         if (selectedTechnology) {
             filtered = filtered.filter((project) =>
@@ -25,10 +24,12 @@ const ProjectsPage = () => {
         }
 
         return filtered;
-    }, [selectedTechnology, selectedCategory, projectsData]);
+    }, [selectedTechnology, selectedCategory, dataProjects]);
 
     const sortedProjects = useMemo(() => {
-        return filteredProjects.sort((a, b) => parseInt(b.stars) - parseInt(a.stars));
+        return filteredProjects.sort(
+            (a, b) => parseInt(b.stars) - parseInt(a.stars)
+        );
     }, [filteredProjects]);
 
     const renderedProjects = sortedProjects.map((project) => (
@@ -62,8 +63,7 @@ const ProjectsPage = () => {
     return (
         <>
             <section>
-
-                <div className="grid grid-cols-1 sm:flex-col sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 xl:gap-10 max-w-[1440px] mt-8">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 xl:gap-10 max-w-[1440px] mt-8">
                     {/* Grid Header Card */}
                     <div className="col-span-1 sm:col-span-2 md:col-span-3 lg:col-span-3">
                         <div className="xl:min-w-[400px] h-full c-card block bg-white shadow-md hover:shadow-xl rounded-lg overflow-hidden">
@@ -79,7 +79,7 @@ const ProjectsPage = () => {
                         </div>
                     </div>
 
-                    {/*  */}
+                    {/* Filters */}
                     <div className="flex justify-center mt-8">
                         {/* Technology Filter */}
                         <div className="mr-4">
@@ -131,3 +131,4 @@ const ProjectsPage = () => {
 };
 
 export default ProjectsPage;
+

@@ -8,7 +8,7 @@ async function handleSubmit(formData: FormData): Promise<void> {
         email: formData.get('email'),
         message: formData.get('message')
     });
-    redirect('/contact/thank-you');
+    redirect('/');
 }
 
 const ContactPage = () => {

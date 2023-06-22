@@ -14,6 +14,7 @@
     "@types/react-dom": "18.2.4",
     "autoprefixer": "10.4.14",
     "eslint": "8.40.0",
+    "firebase": "^9.22.2",
     "next": "^13.4.6",
     "postcss": "8.4.23",
     "react": "^18.2.0",

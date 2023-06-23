@@ -1,7 +1,9 @@
+/* eslint-disable react/jsx-no-duplicate-props */
 "use client"
 import React, { useState, useMemo } from 'react';
 import jsonData from '@data/json/data.json';
 import { Card, HeaderCard } from '@components/index';
+import AnnouncementCard from "@components/Cards/AnnouncementCard";
 
 const ProjectsPage = () => {
 
@@ -90,7 +92,10 @@ const ProjectsPage = () => {
 
     return (
         <>
+            
             <section className='grid w-full'>
+                
+                    <AnnouncementCard />
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 xl:gap-10 max-w-[1440px] mt-8">
                     {/* Grid Header Card */}
                     <div className="col-span-1 sm:col-span-2 md:col-span-3 lg:col-span-3">
@@ -111,7 +116,7 @@ const ProjectsPage = () => {
                     <div className="contents justify-center mt-8 flex-col gap-6 md:flex-row md:gap-0 md:pl-8">
                         {/* Show/Hide Filters Button */}
                         <button
-                            className={`bg-blue-500 text-white px-4 py-2 rounded ${showFilters ? 'md:ml-auto' : ''}`}
+                            className={`bg-yellow-500 text-white px-4 py-2 rounded ${showFilters ? 'md:ml-auto' : ''}`}
                             onClick={toggleFilters}
                         >
                             {showFilters ? 'Hide Filters' : 'Show Filters'}
@@ -125,7 +130,7 @@ const ProjectsPage = () => {
                                         <input
                                             type="checkbox"
                                             id={`tech-${option}`}
-                                            className="mr-2"
+                                            className="mr-2 accent-yellow-500"
                                             checked={selectedTechnology.includes(option)}
                                             onChange={() => handleTechnologyChange(option)}
                                         />
@@ -144,7 +149,7 @@ const ProjectsPage = () => {
                                         <input
                                             type="checkbox"
                                             id={`category-${option}`}
-                                            className="mr-2"
+                                            className="mr-2 accent-yellow-500"
                                             checked={selectedCategory.includes(option)}
                                             onChange={() => handleCategoryChange(option)}
                                         />

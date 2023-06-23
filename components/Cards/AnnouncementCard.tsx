@@ -12,10 +12,10 @@ const AnnouncementCard = () => {
     return (
         <>
             {showAnnouncement && (
-                <div className="shadow-sm bg-yellow-500 py-2 px-4 fixed top-0 left-0 right-0 z-50">
+                <div className="shadow-sm bg-yellow-500 py-2 px-4 w-full  z-50">  {/*fixed top-0 left-0 right-0*/}
                     <div className="flex items-center justify-between">
                         <p className="text-white font-medium text-center m-auto">
-                            Website is Under Work So, Some Features May Not Work
+                            This Page is Under Work So, Some Features May Not Work
                         </p>
                         <button
                             onClick={handleClose}

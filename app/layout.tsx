@@ -3,7 +3,6 @@ import {
   TopNavbar,
   Footer,
 } from "@components/index";
-import AnnouncementCard from "@components/Cards/AnnouncementCard";
 
 import { Roboto_Mono } from "next/font/google";
 const roboto = Roboto_Mono({
@@ -36,7 +35,6 @@ export default function RootLayout({
 
           {/* Header */}
           <div className="z-[999] h-[--navbar-height] py-2 px-4 sm:px-8 md:px-12 sticky top-0 backdrop-blur-md shadow-sm">
-            <AnnouncementCard />
             <TopNavbar />
           </div>
 

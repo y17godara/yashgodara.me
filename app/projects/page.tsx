@@ -1,25 +1,53 @@
-"use client";
+"use client"
 import React, { useState, useMemo } from 'react';
 import jsonData from '@data/json/data.json';
 import { Card, HeaderCard } from '@components/index';
 
 const ProjectsPage = () => {
+
+    // Filter Button State
+    const [showFilters, setShowFilters] = useState(false);
+
+    const toggleFilters = () => {
+        setShowFilters((prevState) => !prevState);
+    };
+
+
+    // 
     const dataProjects = jsonData.dataProjects;
-    const [selectedTechnology, setSelectedTechnology] = useState('');
-    const [selectedCategory, setSelectedCategory] = useState('');
+    const [selectedTechnology, setSelectedTechnology] = useState<string[]>([]);
+    const [selectedCategory, setSelectedCategory] = useState<string[]>([]);
+
+    const handleTechnologyChange = (option: string) => {
+        setSelectedTechnology((prevTechnology) =>
+            prevTechnology.includes(option)
+                ? prevTechnology.filter((tech) => tech !== option)
+                : [...prevTechnology, option]
+        );
+    };
+
+    const handleCategoryChange = (option: string) => {
+        setSelectedCategory((prevCategory) =>
+            prevCategory.includes(option)
+                ? prevCategory.filter((cat) => cat !== option)
+                : [...prevCategory, option]
+        );
+    };
 
     const filteredProjects = useMemo(() => {
         let filtered = Object.values(dataProjects);
 
-        if (selectedTechnology) {
+        if (selectedTechnology.length > 0) {
             filtered = filtered.filter((project) =>
-                project.technology.includes(selectedTechnology)
+                project.technology.some((tech: string) =>
+                    selectedTechnology.includes(tech)
+                )
             );
         }
 
-        if (selectedCategory) {
-            filtered = filtered.filter(
-                (project) => project.Category === selectedCategory
+        if (selectedCategory.length > 0) {
+            filtered = filtered.filter((project) =>
+                selectedCategory.includes(project.Category)
             );
         }
 
@@ -62,73 +90,79 @@ const ProjectsPage = () => {
 
     return (
         <>
-            <section>
+            <section className='grid w-full'>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 xl:gap-10 max-w-[1440px] mt-8">
                     {/* Grid Header Card */}
                     <div className="col-span-1 sm:col-span-2 md:col-span-3 lg:col-span-3">
                         <div className="xl:min-w-[400px] h-full c-card block bg-white shadow-md hover:shadow-xl rounded-lg overflow-hidden">
                             {/* Card Content */}
                             <HeaderCard
-                                projectHightlight={filteredProjects[0]?.name}
-                                projectGithub={filteredProjects[0]?.repositorie}
-                                projectDescription={filteredProjects[0]?.description}
-                                projectTitle={filteredProjects[0]?.name}
-                                imageSrc={filteredProjects[0]?.images['1']}
+                                projectHightlight={dataProjects.projectHeader.name}
+                                projectGithub={dataProjects.projectHeader.repositorie}
+                                projectDescription={dataProjects.projectHeader.description}
+                                projectTitle={dataProjects.projectHeader.name}
+                                imageSrc={dataProjects.projectHeader.images['1']}
                                 imageAlt="Project Image"
                             />
                         </div>
                     </div>
 
                     {/* Filters */}
-                    <div className="flex justify-center mt-8">
+                    <div className="contents justify-center mt-8 flex-col gap-6 md:flex-row md:gap-0 md:pl-8">
+                        {/* Show/Hide Filters Button */}
+                        <button
+                            className={`bg-blue-500 text-white px-4 py-2 rounded ${showFilters ? 'md:ml-auto' : ''}`}
+                            onClick={toggleFilters}
+                        >
+                            {showFilters ? 'Hide Filters' : 'Show Filters'}
+                        </button>
                         {/* Technology Filter */}
-                        <div className="mr-4">
-                            <label htmlFor="technology" className="block mb-2 font-medium">
-                                Technology
-                            </label>
-                            <select
-                                id="technology"
-                                className="p-2 border border-gray-300 rounded"
-                                value={selectedTechnology}
-                                onChange={(e) => setSelectedTechnology(e.target.value)}
-                            >
-                                <option value="">All</option>
-                                {technologyOptions.map((option) => (
-                                    <option key={option} value={option}>
-                                        {option}
-                                    </option>
+                        {showFilters && (
+                            <div className="mr-4">
+                                <label className="block mb-2 font-medium">Technology</label>
+                                {technologyOptions.map((option: string) => (
+                                    <div key={option} className="flex items-center mb-2">
+                                        <input
+                                            type="checkbox"
+                                            id={`tech-${option}`}
+                                            className="mr-2"
+                                            checked={selectedTechnology.includes(option)}
+                                            onChange={() => handleTechnologyChange(option)}
+                                        />
+                                        <label htmlFor={`tech-${option}`}>{option}</label>
+                                    </div>
                                 ))}
-                            </select>
-                        </div>
+                            </div>
+                        )}
 
                         {/* Category Filter */}
-                        <div>
-                            <label htmlFor="category" className="block mb-2 font-medium">
-                                Category
-                            </label>
-                            <select
-                                id="category"
-                                className="p-2 border border-gray-300 rounded"
-                                value={selectedCategory}
-                                onChange={(e) => setSelectedCategory(e.target.value)}
-                            >
-                                <option value="">All</option>
-                                {categoryOptions.map((option) => (
-                                    <option key={option} value={option}>
-                                        {option}
-                                    </option>
+                        {showFilters && (
+                            <div>
+                                <label className="block mb-2 font-medium">Category</label>
+                                {categoryOptions.map((option: string) => (
+                                    <div key={option} className="flex items-center mb-2">
+                                        <input
+                                            type="checkbox"
+                                            id={`category-${option}`}
+                                            className="mr-2"
+                                            checked={selectedCategory.includes(option)}
+                                            onChange={() => handleCategoryChange(option)}
+                                        />
+                                        <label htmlFor={`category-${option}`}>{option}</label>
+                                    </div>
                                 ))}
-                            </select>
-                        </div>
+                            </div>
+                        )}
                     </div>
-
-                    {/* Rendered Projects */}
-                    {renderedProjects}
                 </div>
+            </section>
+
+            {/* Rendered Projects */}
+            <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 xl:gap-10 max-w-[1440px] mt-8">
+                {renderedProjects}
             </section>
         </>
     );
 };
 
 export default ProjectsPage;
-

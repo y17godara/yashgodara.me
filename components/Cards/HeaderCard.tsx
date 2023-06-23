@@ -46,7 +46,7 @@ const Card: React.FC<CardProps> = ({
                             {projectDescription ||
                                 "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo expedita voluptas culpa sapiente alias molestiae. Numquam corrupti in laborum sed rerum et corporis."}
                         </p>
-                        <div className="mt-3 flex justify-around items-center">
+                        {/* <div className="mt-3 flex justify-around items-center">
                             <a
                                 href="#"
                                 className="flex gap-1 items-center text-sm font-semibold hover:underline text-blue-500"
@@ -59,7 +59,7 @@ const Card: React.FC<CardProps> = ({
                             >
                                 Deploy <BsArrowRight />
                             </a>
-                        </div>
+                        </div> */}
                     </div>
                     <div className="flex flex-col sm:w-1/2 sm:border-l sm:pl-4">
                         <div className="p-4 border-t border-b text-sm text-gray-700">

@@ -10,3 +10,6 @@
     background-color: #e0cb54;
     color: #fff;
 }
+::-webkit-scrollbar {
+    display: none;
+}

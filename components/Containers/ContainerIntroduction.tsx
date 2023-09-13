@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { FaKickstarter, FaTwitter, FaLinkedin } from "react-icons/fa";
+import { FaTwitter, FaLinkedin } from "react-icons/fa";
 
 const ContainerIntroduction = () => {
   return (
@@ -25,23 +25,15 @@ const ContainerIntroduction = () => {
                   <a
                     title="twitter"
                     href="https://twitter.com/y17godara"
-                    target="_blank"
+                    target="_blank" rel="noopener noreferrer" 
                     className="hover:opacity-80 transition"
                   >
                     <FaTwitter />
                   </a>
                   <a
-                    title="github"
-                    href="https://kick.com/yashgodara"
-                    target="_blank"
-                    className="hover:opacity-80 transition"
-                  >
-                    <FaKickstarter />
-                  </a>
-                  <a
+                    target="_blank" rel="noopener noreferrer" 
                     title="linkedIn"
                     href="https://www.linkedin.com/in/yash-godara-a91442246/"
-                    target="_blank"
                     className="hover:opacity-80 transition"
                   >
                     <FaLinkedin />

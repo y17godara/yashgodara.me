@@ -28,7 +28,7 @@ const TopNavbar = () => {
             </a>
             <div className="flex flex-row item-center gap-2">
               <a
-                href="/resume.pdf"
+                href="/static/resume.pdf"
                 download="resume.pdf"
                 title="Download Resume"
                 className="bg-yellow-300 border-b-2 border-gray-900 hover:border-gray-900 hover:bg-gray-900 hover:text-white text-gray-800 py-2 px-4 rounded inline-flex items-center"

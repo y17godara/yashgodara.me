@@ -11,22 +11,23 @@ const ContainerIntroduction = () => {
             alt="logo"
             width={120}
             height={120}
-            className="w-32 h-32 rounded-3xl inline avatar"
+            loading="lazy"
+            className="inline w-32 h-32 rounded-3xl avatar"
           />
         </div>
         <div>
           <div className="max-w-[768px] px-5">
-            <h1 className="mt-4 text-3xl font-bold flex md:items-end md:flex-row flex-col">
+            <h1 className="flex flex-col mt-4 text-3xl font-bold md:items-end md:flex-row">
               <div title="y17godara">Yash Godara</div>
 
-              <div className="flex md:ml-3 items-center">
-                <div className="text-lg">[he/they]</div>
-                <div className="flex text-xl ml-3 gap-1 items-center">
+              <div className="flex items-center md:ml-3">
+                <div className="text-lg">[he/him]</div>
+                <div className="flex items-center gap-1 ml-3 text-xl">
                   <a
                     title="twitter"
                     href="https://twitter.com/y17godara"
                     target="_blank" rel="noopener noreferrer" 
-                    className="hover:opacity-80 transition"
+                    className="transition hover:opacity-80"
                   >
                     <FaTwitter />
                   </a>
@@ -34,7 +35,7 @@ const ContainerIntroduction = () => {
                     target="_blank" rel="noopener noreferrer" 
                     title="linkedIn"
                     href="https://www.linkedin.com/in/yash-godara-a91442246/"
-                    className="hover:opacity-80 transition"
+                    className="transition hover:opacity-80"
                   >
                     <FaLinkedin />
                   </a>

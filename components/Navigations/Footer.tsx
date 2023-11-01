@@ -1,11 +1,11 @@
 import Image from "next/image";
-import { FaKickstarter, FaLinkedin } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
 
 const Footer = () => {
   return (
     <>
       <footer className="bg-gray-900">
-        <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+        <div className="w-full max-w-screen-xl p-4 py-6 mx-auto lg:py-8">
           <div className="md:flex md:justify-between">
             <div className="mb-6 md:mb-0">
               <a href="/">
@@ -14,7 +14,7 @@ const Footer = () => {
                   className="flex flex-row items-center gap-2 h-[88px]"
                 >
                   <Image
-                    className="hidden items-center md:flex xl:flex"
+                    className="items-center hidden md:flex xl:flex"
                     src="https://i.imgur.com/n05Wr0e.png"
                     alt="logo"
                     width={60}
@@ -31,7 +31,7 @@ const Footer = () => {
                 <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
                   Menus
                 </h2>
-                <ul className="text-gray-600 dark:text-gray-400 font-medium">
+                <ul className="font-medium text-gray-600 dark:text-gray-400">
                   <li className="mb-4">
                     <a href="/" className="hover:underline">
                       Home
@@ -54,16 +54,7 @@ const Footer = () => {
                 <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
                   Follow Me
                 </h2>
-                <ul className="text-gray-600 dark:text-gray-400 font-medium">
-                  <li className="mb-4">
-                    <a
-                      href="https://kick.com/yashgodara"
-                      target="_blank"
-                      className="hover:underline "
-                    >
-                      Kick Live
-                    </a>
-                  </li>
+                <ul className="font-medium text-gray-600 dark:text-gray-400">
                   <li className="mb-4">
                     <a
                       href="https://github.com/y17godara"
@@ -130,14 +121,6 @@ const Footer = () => {
                   />
                 </svg>
                 <span className="sr-only">GitHub account</span>
-              </a>
-              <a
-                href="https://kick.com/yashgodara"
-                target="_blank"
-                className="text-gray-500 hover:text-gray-900 dark:hover:text-white"
-              >
-                <FaKickstarter />
-                <span className="sr-only">Kick Live</span>
               </a>
               <a
                 title="linkedIn"

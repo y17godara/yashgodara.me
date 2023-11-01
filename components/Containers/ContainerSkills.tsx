@@ -6,7 +6,7 @@ const ContainerSkills = () => {
       <section>
         <div>
           <div className="max-w-[768px] px-5">
-            <div className="flex flex-col item-center gap-2">
+            <div className="flex flex-col gap-2 item-center">
               <h1 className="text-3xl font-bold">🖥️Technology</h1>
               <p className="mt-4">
                 I have proficiency in a variety of technologies. I am
@@ -16,10 +16,10 @@ const ContainerSkills = () => {
                 applications that are engaging and responsive.
               </p>
               
-              <div className="flex flex-col item-center gap-4">
-                <div className="flex item-center gap-1">
+              <div className="flex flex-col gap-4 item-center">
+                <div className="flex gap-1 item-center">
                   <img
-                    src="https://skillicons.dev/icons?i=html,css,js,python,c,tailwind,postman,react,next,nodejs,express,ts,mongo,cpp"
+                    src="https://skillicons.dev/icons?i=html,css,js,cpp,react,next,nodejs,express,ts,tailwind,postman,mongo,postgresql,git,scss,redux,docker,figma,"
                     alt="skills-logo"
                   />
                 </div>
